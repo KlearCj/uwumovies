@@ -1,5 +1,6 @@
 import { Box, Flex, Heading, Img, Text } from "@chakra-ui/react";
 import React from "react";
+import {motion} from 'framer-motion';
 const img = "https://image.tmdb.org/t/p/w500";
 
 const TvCards = ({ data }) => {

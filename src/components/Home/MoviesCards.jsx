@@ -9,9 +9,11 @@ const MoviesCards = ({ data }) => {
         POPULAR MOVIES
       </Heading>
     <Flex alignItems="center" h="100vh" pr="50px" pl="50px">
-     <Flex overflowX="scroll">
+     <Flex overflowX="scroll" >
      {data?.results.map((movie, i) => (
-        <Img key={i} p="10px" src={`${img}${movie.poster_path}`} alt={movie.title} />
+      <Flex h="300px" w="400px" p="10px" overflow="hidden"key={i} >
+        <Img src={`${img}${movie.poster_path}`} alt={movie.title} />
+      </Flex>
         ))}
      </Flex>
     

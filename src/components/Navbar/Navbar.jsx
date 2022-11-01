@@ -9,6 +9,7 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
+import ToggleColorMode from "./ToggleColorMode";
 
 const Navbar = () => {
   return (
@@ -30,6 +31,7 @@ const Navbar = () => {
             </MenuItem>
           </MenuList>
         </Menu>
+        <ToggleColorMode />
       </Stack>
     </Flex>
   );
