@@ -51,7 +51,7 @@ const Login = () => {
           <Flex pt="15px">
             <Text>Don`t have an account?</Text>
             <Link to="/sign">
-            <Button pl="10px"variant='link'>
+            <Button pl="10px" variant='link'>
               SignUp
             </Button>
             </Link>
