@@ -9,9 +9,9 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <div>
-     {/*  <Navbar /> */}
+      {/*  <Navbar /> */}
       <Routes>
-        <Route path='/' element={<Main/>}/>
+        <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
         <Route path="/sign" element={<SignIn />} />
         <Route path="/home" element={<Home />} />

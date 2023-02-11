@@ -8,10 +8,8 @@ const theme = {
   styles: {
     global: {
       body: {
-        fontFamily: "body",
         color: ("gray.800", "whiteAlpha.900"),
-        bg:("white", "#121212"),
-        lineHeight: "base",
+        bg: ("white", "#121212"),
       },
     },
   },
