@@ -6,15 +6,22 @@ const theme = {
     useSystemColorMode: true,
   },
   styles: {
-    global: {},
+    global: {
+      body: {
+        fontFamily: "body",
+        color: ("gray.800", "whiteAlpha.900"),
+        bg:("white", "#121212"),
+        lineHeight: "base",
+      },
+    },
   },
-  breakpoints : {
-    sm: '320px',
-    md: '768px',
-    lg: '960px',
-    xl: '1200px',
-  '2xl': '1536px',
-  }
+  breakpoints: {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1200px",
+    "2xl": "1536px",
+  },
 };
 
 export default extendTheme(theme);
