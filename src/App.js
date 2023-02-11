@@ -1,5 +1,4 @@
 import Home from "./components/Home/Home";
-import Navbar from "./components/Navbar/Navbar";
 import Login from "./components/Login/Login";
 import { Route, Routes } from "react-router-dom";
 import SignIn from "./components/SignIn/SignIn";
@@ -9,7 +8,6 @@ import Main from "./components/Main/Main";
 function App() {
   return (
     <div>
-      {/*  <Navbar /> */}
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/login" element={<Login />} />
