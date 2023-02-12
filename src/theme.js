@@ -1,15 +1,11 @@
 const { extendTheme } = require("@chakra-ui/react");
 
 const theme = {
-  config: {
-    initialColorMode: "dark",
-    useSystemColorMode: true,
-  },
   styles: {
     global: {
       body: {
-        color: ("gray.800", "whiteAlpha.900"),
-        bg: ("white", "#121212"),
+        color: ("whiteAlpha.900"),
+        bg: ("#121212"),
       },
     },
   },

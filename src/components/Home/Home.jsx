@@ -8,7 +8,6 @@ const Home = () => {
   const [popTv, setPopTv] = useState([]);
   const [bannerImg, setBannerImg] = useState([]);
 
-  console.log(popMovies);
   useEffect(() => {
     axios
       .get(
@@ -23,7 +22,7 @@ const Home = () => {
   return (
     <div>
       <Navbar />
-      <Banner images={bannerImg}/>
+      <Banner images={bannerImg} />
     </div>
   );
 };

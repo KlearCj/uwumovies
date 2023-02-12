@@ -9,11 +9,16 @@ import {
   MenuList,
   MenuItem,
 } from "@chakra-ui/react";
-import ToggleColorMode from "./ToggleColorMode";
 
 const Navbar = () => {
   return (
-    <Flex justifyContent="end" mt="10px">
+    <Flex
+      justifyContent="end"
+      mt="10px"
+      bgColor="inherit"
+      pos="fixed"
+      zIndex={1000}
+    >
       <Stack direction={{ lg: "row", sm: "none" }} spacing={4} pr="50px">
         <Button variant="link">Home</Button>
         <Button variant="link">Movies</Button>
@@ -23,15 +28,10 @@ const Navbar = () => {
             Profile
           </MenuButton>
           <MenuList>
-            <MenuItem>
-            Config
-            </MenuItem>
-            <MenuItem>
-            Logout
-            </MenuItem>
+            <MenuItem>Config</MenuItem>
+            <MenuItem>Logout</MenuItem>
           </MenuList>
         </Menu>
-        <ToggleColorMode />
       </Stack>
     </Flex>
   );
