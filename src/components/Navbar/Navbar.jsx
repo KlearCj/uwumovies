@@ -1,28 +1,44 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Button,
   Flex,
-  Stack,
-  Box,
   MenuButton,
   Menu,
   MenuList,
   MenuItem,
+  IconButton,
 } from "@chakra-ui/react";
+import logo from "../../assets/uwulogo.png";
 
 const Navbar = () => {
   return (
     <Flex
-      justifyContent="end"
-      mt="10px"
+      h="50px"
+      w="100%"
+      justifyContent="space-between"
       bgColor="inherit"
       pos="fixed"
       zIndex={1000}
     >
-      <Stack direction={{ lg: "row", sm: "none" }} spacing={4} pr="50px">
-        <Button variant="link">Home</Button>
-        <Button variant="link">Movies</Button>
-        <Button variant="link">TvShows</Button>
+      <Flex
+        width={{ base: "50%", md: "25%" }}
+        h={{ base: "15vh", lg: "20vh" }}
+        ml="20px"
+      >
+        <img src={logo} alt="logo" />
+      </Flex>
+      <Flex mt="30px" mr="50px" display={{ base: "none", md: "flex" }}>
+        <Flex mr="5px">
+          <Button colorScheme="#121212" variant="ghost">
+            Home
+          </Button>
+          <Button colorScheme="#121212" variant="ghost">
+            Movies
+          </Button>
+          <Button colorScheme="#121212" variant="ghost">
+            TvShows
+          </Button>
+        </Flex>
         <Menu>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
             Profile
@@ -32,7 +48,24 @@ const Navbar = () => {
             <MenuItem>Logout</MenuItem>
           </MenuList>
         </Menu>
-      </Stack>
+      </Flex>
+      <Flex display={{ base: "flex", md: "none" }} m="25px">
+        <Menu>
+          <MenuButton
+            as={IconButton}
+            aria-label="Options"
+            icon={<HamburgerIcon />}
+            variant="outline"
+          />
+          <MenuList>
+            <MenuItem>Home</MenuItem>
+            <MenuItem>Movies</MenuItem>
+            <MenuItem>Tv shows</MenuItem>
+            <MenuItem>Profile</MenuItem>
+            <MenuItem>Logout</MenuItem>
+          </MenuList>
+        </Menu>
+      </Flex>
     </Flex>
   );
 };

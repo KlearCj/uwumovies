@@ -34,25 +34,10 @@
 
 .content_baner {
     position: absolute;
+    flex-direction: column;
     width: 100%;
     top: 49%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 5%;
+    padding-top: 5%;
 }
 
-.banner_h3 {
-    z-index: 1;
-    font-size: 3.5vw;
-    font-weight: bold;
-    color: white;
-}
-
-.banner_p {
-    z-index: 1;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: white;
-    width: 375px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
