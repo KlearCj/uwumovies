@@ -2,17 +2,15 @@ import { Flex, Heading, Image } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import styles from "./banner.module.css";
 
-
 const baseUrl = "https://image.tmdb.org/t/p/original";
 
 const Banner = ({ images }) => {
   const [movie, setMovie] = useState([]);
 
   useEffect(() => {
-    setMovie(images[Math.floor(Math.random() * images.length)]);
+    setMovie(images[Math.floor(Math.random() * images?.length)]);
   }, [images]);
 
-  console.log(movie);
 
   return (
     <Flex className={styles.banner}>
@@ -26,10 +24,10 @@ const Banner = ({ images }) => {
       </Flex>
       <Flex className={styles.content_baner}>
         <Heading as="h2" size="2xl" noOfLines={1}>
-          {movie.title}
+          {movie?.title}
         </Heading>
-        <Heading as="h3" size="lg" noOfLines={2} mt='20px'w='50%'>
-          {movie.overview}
+        <Heading as="h3" size="lg" noOfLines={2} mt="20px" w="50%">
+          {movie?.overview}
         </Heading>
       </Flex>
     </Flex>
