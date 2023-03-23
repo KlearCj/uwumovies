@@ -1,8 +1,8 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text} from "@chakra-ui/react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Modalito from "../modal/modal";
 import styles from "./slider.module.css";
-
 
 const responsive = {
   superLargeDesktop: {
@@ -23,9 +23,10 @@ const responsive = {
   },
 };
 
-const baseUrl="https://image.tmdb.org/t/p/original"
+const baseUrl = "https://image.tmdb.org/t/p/original";
 
-const Slider = ({title,props}) => {
+const Slider = ({ title, props }) => {
+
   return (
     <Flex className={styles.slider}>
       <Flex m="10px">
@@ -35,8 +36,12 @@ const Slider = ({title,props}) => {
         <Carousel responsive={responsive} className={styles.carousel}>
           {props?.map((movie) => {
             return (
-              <Flex className={styles.item} key={movie.id}>
+              <Flex
+                className={styles.item}
+                key={movie.id}
+              >
                 <img src={`${baseUrl}${movie.poster_path}`} alt={movie.id} />
+                <Modalito movie={movie} />
               </Flex>
             );
           })}
